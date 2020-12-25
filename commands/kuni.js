@@ -9,16 +9,13 @@ module.exports.run = async (bot, message, args) => {
                 description: "You can use this command in an NSFW Channel!"
             }})
 	}
-    superagent.get('https://nekos.life/api/v2/img/ero')
+    superagent.get('https://nekos.life/api/v2/img/kuni')
         .end((err, response) => {
       const embed = new Discord.MessageEmbed()
-      .setTitle("LILY nsfw commands")
+      .setTitle("Kuni!")
+      .setImage(response.body.url)
       .setColor(`#80dfff`)
-      .addFields(
-        //all commands
-     { name: 'NSFW commands:', value: '`Lhentai`,`Lhentaigif`,`Lero`,`Leroneko`,`Lanal`,`Lblowjob`,`Lcum`,`Lerofeet`,`Leroyuri`, `Lfemdom`,`Lboobs`,`Llewdneko`,`Lkuni`'},
-     { name: 'Thank you!', value: '[invite bot](http://bit.ly/lilybot) | [support server](https://discord.gg/5nqkBD6rrE)'}
-    )
+      .setURL(response.body.url);
   message.channel.send(embed);
     }).catch((err) => message.channel.send({embed: {
                 color: 16734039,
@@ -28,9 +25,9 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.config = {
-    name: "Lnsfw",
-    description: "example of an nsfw help.",
-    usage: "Lnsfw",
+    name: "Lkuni",
+    description: "Answers support",
+    usage: "Lkuni",
     accessableby: "Members",
     aliases: []
 }

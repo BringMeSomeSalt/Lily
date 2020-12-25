@@ -11,11 +11,11 @@ module.exports.run = async (bot, message, args) => {
          { name: 'Moderation commands:', value: '`Lclear`,`Lkick`,`Lban`,`Linfo<someone>`'},
          { name: 'Utility commands:', value: '`Lsay`,`Lannounce`,`Lid`'},
          { name: 'Meme commands:', value: '`Lmeme`,`Lreaction`,`Lhmmm`'},
-         { name: 'Fun commands:', value: '`Lhug`,`Lkiss`,`Lslap`,`Lkill`,`Ljoke`'},
+         { name: 'Fun commands:', value: '`Lhug`,`Lkiss`,`Lslap`,`Lkill`,`Ljoke`,`Lsomeone(summon random member)`'},
          { name: 'Game commands:', value: '`Lslots`'},
          { name: 'Misc commands:', value: '`L8ball<question>`,`Ldice`,`Lflipcoin`,`Lsay`'},
-         { name: 'Anime commands:', value: '`Lwallpaper`,`Lneko`,`Lkemonomimi`'},
-         { name: 'Animal commands:', value: '`Lcute`,`Ldog`,`Lcat`'},
+         { name: 'Anime commands:', value: '`Lwallpaper`,`Lneko`,`Lkemonomimi`,`Lgecg`'},
+         { name: 'Animal commands:', value: '`Lcute`,`Ldog`,`Lcat`,`Llizard`,`Lgoose`'},
          { name: 'NSFW:', value: '`Lnsfw`'},
          { name: 'Thank you!', value: '[invite bot](http://bit.ly/lilybot) | [support server](https://discord.gg/5nqkBD6rrE)'}
         )
