@@ -2,7 +2,7 @@ const Discord = require("discord.js")
 
 module.exports.run = async (bot, message, args) => {
   let question = message.content
-  .split(`Lpoll`)
+  .split(`Lpoll1`)
   .join(' ');
 
 const Embed = new Discord.MessageEmbed()
@@ -13,9 +13,9 @@ const Embed = new Discord.MessageEmbed()
 }
 
 module.exports.config = {
-    name: "Lpoll",
+    name: "Lpoll1",
     description: "Answers support",
-    usage: "Lpoll",
+    usage: "Lpoll1",
     accessableby: "Members",
     aliases: []
 }
