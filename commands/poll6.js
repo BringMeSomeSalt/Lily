@@ -2,7 +2,7 @@ const Discord = require("discord.js")
 
 module.exports.run = async (bot, message, args) => {
   let question = message.content
-  .split(`Lpoll2`)
+  .split(`Lpoll6`)
   .join(' ');
 
 const Embed = new Discord.MessageEmbed()
@@ -12,12 +12,16 @@ const Embed = new Discord.MessageEmbed()
   let msgEmbed = await message.channel.send(Embed);
   await msgEmbed.react("1️⃣");
   await msgEmbed.react("2️⃣");
+  await msgEmbed.react("3️⃣");
+  await msgEmbed.react("4️⃣");
+  await msgEmbed.react("5️⃣");
+  await msgEmbed.react("6️⃣");
 }
 
 module.exports.config = {
-    name: "Lpoll2",
+    name: "Lpoll6",
     description: "Answers support",
-    usage: "Lpoll2",
+    usage: "Lpoll6",
     accessableby: "Members",
     aliases: []
 }

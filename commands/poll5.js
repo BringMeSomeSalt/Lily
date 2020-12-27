@@ -2,20 +2,25 @@ const Discord = require("discord.js")
 
 module.exports.run = async (bot, message, args) => {
   let question = message.content
-  .split(`Lpoll`)
+  .split(`Lpoll5`)
   .join(' ');
 
 const Embed = new Discord.MessageEmbed()
-  .setTitle(`uh...`)
-  .setDescription(`Type Lpoll<number between 1 - 10> to make poll has (number you type) reactions. eg. Lpoll4 (question)`)
-  .setColor(`#80dfff`);
+  .setTitle(`New poll!`)
+  .setDescription(`${question}`)
+  .setColor(`#66ff66`);
   let msgEmbed = await message.channel.send(Embed);
+  await msgEmbed.react("1️⃣");
+  await msgEmbed.react("2️⃣");
+  await msgEmbed.react("3️⃣");
+  await msgEmbed.react("4️⃣");
+  await msgEmbed.react("5️⃣");
 }
 
 module.exports.config = {
-    name: "Lpoll",
+    name: "Lpoll5",
     description: "Answers support",
-    usage: "Lpoll",
+    usage: "Lpoll5",
     accessableby: "Members",
     aliases: []
 }
