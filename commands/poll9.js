@@ -19,6 +19,7 @@ const Embed = new Discord.MessageEmbed()
   await msgEmbed.react("7️⃣");
   await msgEmbed.react("8️⃣");
   await msgEmbed.react("9️⃣");
+  message.delete();
 }
 
 module.exports.config = {
