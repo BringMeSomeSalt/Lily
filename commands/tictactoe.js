@@ -19,15 +19,15 @@ module.exports.run = async (bot, message, args) => {
         midDuel.add(author)
         midDuel.add(member.id)
         let turnName
-        let a1 = '1️⃣'
-        let a2 = '2️⃣'
-        let a3 = '3️⃣'
-        let b1 = '4️⃣'
-        let b2 = '5️⃣'
-        let b3 = '6️⃣'
-        let c2 = '7️⃣'
-        let c2 = '8️⃣'
-        let c3 = '9️⃣'
+        let a1 = '⬜'
+        let a2 = '⬜'
+        let a3 = '⬜'
+        let b1 = '⬜'
+        let b2 = '⬜'
+        let b3 = '⬜'
+        let c1 = '⬜'
+        let c2 = '⬜'
+        let c3 = '⬜'
         let xCircle
         let winner
         let turn
@@ -60,7 +60,7 @@ module.exports.run = async (bot, message, args) => {
                         midDuel.delete(member.id)
                         break
                     } else {
-                        if (msg.first().content.toLowerCase().trim() === '1' || msg.first().content.toLowerCase().trim() === 'tl') {
+                        if (msg.first().content.toLowerCase().trim() === 'top left' || msg.first().content.toLowerCase().trim() === 'tl') {
                             if (a1 == '🔴' || a1 == '❌') {
                                 message.channel.send('That spot is already occupied.. and now you lost lol')
                                 midDuel.delete(author)
@@ -69,7 +69,7 @@ module.exports.run = async (bot, message, args) => {
                             } else {
                                 a1 = xCircle
                             }
-                        } else if (msg.first().content.toLowerCase().trim() === '2' || msg.first().content.toLowerCase().trim() === 't') {
+                        } else if (msg.first().content.toLowerCase().trim() === 'top' || msg.first().content.toLowerCase().trim() === 't') {
                             if (a2 == '🔴' || a2 == '❌') {
                                 message.channel.send('That spot is already occupied.. and now you lost lol')
                                 midDuel.delete(author)
@@ -78,7 +78,7 @@ module.exports.run = async (bot, message, args) => {
                             } else {
                                 a2 = xCircle
                             }
-                        } else if (msg.first().content.toLowerCase().trim() === '3' || msg.first().content.toLowerCase().trim() === 'tr') {
+                        } else if (msg.first().content.toLowerCase().trim() === 'top right' || msg.first().content.toLowerCase().trim() === 'tr') {
                             if (a3 == '🔴' || a3 == '❌') {
                                 message.channel.send('That spot is already occupied.. and now you lost lol')
                                 midDuel.delete(author)
@@ -87,7 +87,7 @@ module.exports.run = async (bot, message, args) => {
                             } else {
                                 a3 = xCircle
                             }
-                        } else if (msg.first().content.toLowerCase().trim() === '4' || msg.first().content.toLowerCase().trim() === 'l') {
+                        } else if (msg.first().content.toLowerCase().trim() === 'left' || msg.first().content.toLowerCase().trim() === 'l') {
                             if (b1 == '🔴' || b1 == '❌') {
                                 message.channel.send('That spot is already occupied.. and now you lost lol')
                                 midDuel.delete(author)
@@ -96,7 +96,7 @@ module.exports.run = async (bot, message, args) => {
                             } else {
                                 b1 = xCircle
                             }
-                        } else if (msg.first().content.toLowerCase().trim() === '5' || msg.first().content.toLowerCase().trim() === 'm') {
+                        } else if (msg.first().content.toLowerCase().trim() === 'middle' || msg.first().content.toLowerCase().trim() === 'm') {
                             if (b2 == '🔴' || b2 == '❌') {
                                 message.channel.send('That spot is already occupied.. and now you lost lol')
                                 midDuel.delete(author)
@@ -105,7 +105,7 @@ module.exports.run = async (bot, message, args) => {
                             } else {
                                 b2 = xCircle
                             }
-                        } else if (msg.first().content.toLowerCase().trim() === '6' || msg.first().content.toLowerCase().trim() === 'r') {
+                        } else if (msg.first().content.toLowerCase().trim() === 'right' || msg.first().content.toLowerCase().trim() === 'r') {
                             if (b3 == '🔴' || b3 == '❌') {
                                 message.channel.send('That spot is already occupied.. and now you lost lol')
                                 midDuel.delete(author)
@@ -114,7 +114,7 @@ module.exports.run = async (bot, message, args) => {
                             } else {
                                 b3 = xCircle
                             }
-                        } else if (msg.first().content.toLowerCase().trim() === '7' || msg.first().content.toLowerCase().trim() === 'bl') {
+                        } else if (msg.first().content.toLowerCase().trim() === 'bottom left' || msg.first().content.toLowerCase().trim() === 'bl') {
                             if (c1 == '🔴' || c1 == '❌') {
                                 message.channel.send('That spot is already occupied.. and now you lost lol')
                                 midDuel.delete(author)
@@ -123,7 +123,7 @@ module.exports.run = async (bot, message, args) => {
                             } else {
                                 c1 = xCircle
                             }
-                        } else if (msg.first().content.toLowerCase().trim() === '8' || msg.first().content.toLowerCase().trim() === 'b') {
+                        } else if (msg.first().content.toLowerCase().trim() === 'bottom' || msg.first().content.toLowerCase().trim() === 'b') {
                             if (c2 == '🔴' || c2 == '❌') {
                                 message.channel.send('That spot is already occupied.. and now you lost lol')
                                 midDuel.delete(author)
@@ -132,7 +132,7 @@ module.exports.run = async (bot, message, args) => {
                             } else {
                                 c2 = xCircle
                             }
-                        } else if (msg.first().content.toLowerCase().trim() === '9' || msg.first().content.toLowerCase().trim() === 'br') {
+                        } else if (msg.first().content.toLowerCase().trim() === 'bottom right' || msg.first().content.toLowerCase().trim() === 'br') {
                             if (c3 == '🔴' || c3 == '❌') {
                                 message.channel.send('That spot is already occupied.. and now you lost lol')
                                 midDuel.delete(author)
