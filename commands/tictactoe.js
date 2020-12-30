@@ -225,5 +225,5 @@ module.exports.run = async (bot, message, args) => {
         description: "example of an help.",
         usage: "Ltictactoe",
         accessableby: "Members",
-        aliases: ['ttt']
+        aliases: ['Lttt']
     }
