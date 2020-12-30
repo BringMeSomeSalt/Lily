@@ -10,13 +10,13 @@ const Embed = new Discord.MessageEmbed()
   .setDescription(`${question}`)
   .setColor(`#66ff66`);
   let msgEmbed = await message.channel.send(Embed);
+  message.delete();
   await msgEmbed.react("1️⃣");
   await msgEmbed.react("2️⃣");
   await msgEmbed.react("3️⃣");
   await msgEmbed.react("4️⃣");
   await msgEmbed.react("5️⃣");
   await msgEmbed.react("6️⃣");
-  message.delete();
 }
 
 module.exports.config = {
