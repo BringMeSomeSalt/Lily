@@ -4,10 +4,10 @@ const Embed = require('discord.js')
 
 module.exports.run = async (bot, message, args) => {
         const snakeGame = new SnakeGame({
-            title: '🐍 Snake Game 🐍',
+            title: ' Snake!!!',
             color: "#ff3333",
             timestamp: true,
-            gameOverTitle: "🐍 Game Over 🐍"
+            gameOverTitle: "Game Over!!!"
         })
         snakeGame.newGame(message);
     }
