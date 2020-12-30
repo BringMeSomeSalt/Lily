@@ -10,6 +10,7 @@ module.exports.run = async (bot, message, args) => {
         "NO",
         "ABSOLUTELY",
         "ABSOLUTELY NOT",
+        'HELL YES!!!',
         "MAY BE?",
         "Without a doubt",
         "Very doubtful",

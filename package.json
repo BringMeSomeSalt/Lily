@@ -9,6 +9,7 @@
     "moment": "^2.29.1",
     "random-puppy": "^1.1.0",
     "snekfetch": "^4.0.4",
+    "srod-v2": "^1.0.1",
     "superagent": "^6.1.0"
   },
   "devDependencies": {},
