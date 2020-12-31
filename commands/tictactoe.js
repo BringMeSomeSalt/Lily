@@ -62,7 +62,7 @@ module.exports.run = async (bot, message, args) => {
                     } else {
                         if (msg.first().content.toLowerCase().trim() === 'top left' || msg.first().content.toLowerCase().trim() === 'tl') {
                             if (a1 == '🔴' || a1 == '❌') {
-                                message.channel.send('That spot is already occupied.. and now you lost lol')
+                                message.channel.send('That spot is already occupied... you lost!')
                                 midDuel.delete(author)
                                 midDuel.delete(member.id)
                                 break
@@ -71,7 +71,7 @@ module.exports.run = async (bot, message, args) => {
                             }
                         } else if (msg.first().content.toLowerCase().trim() === 'top' || msg.first().content.toLowerCase().trim() === 't') {
                             if (a2 == '🔴' || a2 == '❌') {
-                                message.channel.send('That spot is already occupied.. and now you lost lol')
+                                message.channel.send('That spot is already occupied... you lost!')
                                 midDuel.delete(author)
                                 midDuel.delete(member.id)
                                 break
@@ -80,7 +80,7 @@ module.exports.run = async (bot, message, args) => {
                             }
                         } else if (msg.first().content.toLowerCase().trim() === 'top right' || msg.first().content.toLowerCase().trim() === 'tr') {
                             if (a3 == '🔴' || a3 == '❌') {
-                                message.channel.send('That spot is already occupied.. and now you lost lol')
+                                message.channel.send('That spot is already occupied... you lost!')
                                 midDuel.delete(author)
                                 midDuel.delete(member.id)
                                 break
@@ -89,7 +89,7 @@ module.exports.run = async (bot, message, args) => {
                             }
                         } else if (msg.first().content.toLowerCase().trim() === 'left' || msg.first().content.toLowerCase().trim() === 'l') {
                             if (b1 == '🔴' || b1 == '❌') {
-                                message.channel.send('That spot is already occupied.. and now you lost lol')
+                                message.channel.send('That spot is already occupied... you lost!')
                                 midDuel.delete(author)
                                 midDuel.delete(member.id)
                                 break
@@ -98,7 +98,7 @@ module.exports.run = async (bot, message, args) => {
                             }
                         } else if (msg.first().content.toLowerCase().trim() === 'middle' || msg.first().content.toLowerCase().trim() === 'm') {
                             if (b2 == '🔴' || b2 == '❌') {
-                                message.channel.send('That spot is already occupied.. and now you lost lol')
+                                message.channel.send('That spot is already occupied... you lost!')
                                 midDuel.delete(author)
                                 midDuel.delete(member.id)
                                 break
@@ -107,7 +107,7 @@ module.exports.run = async (bot, message, args) => {
                             }
                         } else if (msg.first().content.toLowerCase().trim() === 'right' || msg.first().content.toLowerCase().trim() === 'r') {
                             if (b3 == '🔴' || b3 == '❌') {
-                                message.channel.send('That spot is already occupied.. and now you lost lol')
+                                message.channel.send('That spot is already occupied... you lost!')
                                 midDuel.delete(author)
                                 midDuel.delete(member.id)
                                 break
@@ -116,7 +116,7 @@ module.exports.run = async (bot, message, args) => {
                             }
                         } else if (msg.first().content.toLowerCase().trim() === 'bottom left' || msg.first().content.toLowerCase().trim() === 'bl') {
                             if (c1 == '🔴' || c1 == '❌') {
-                                message.channel.send('That spot is already occupied.. and now you lost lol')
+                                message.channel.send('That spot is already occupied... you lost!')
                                 midDuel.delete(author)
                                 midDuel.delete(member.id)
                                 break
@@ -125,7 +125,7 @@ module.exports.run = async (bot, message, args) => {
                             }
                         } else if (msg.first().content.toLowerCase().trim() === 'bottom' || msg.first().content.toLowerCase().trim() === 'b') {
                             if (c2 == '🔴' || c2 == '❌') {
-                                message.channel.send('That spot is already occupied.. and now you lost lol')
+                                message.channel.send('That spot is already occupied... you lost!')
                                 midDuel.delete(author)
                                 midDuel.delete(member.id)
                                 break
@@ -134,7 +134,7 @@ module.exports.run = async (bot, message, args) => {
                             }
                         } else if (msg.first().content.toLowerCase().trim() === 'bottom right' || msg.first().content.toLowerCase().trim() === 'br') {
                             if (c3 == '🔴' || c3 == '❌') {
-                                message.channel.send('That spot is already occupied.. and now you lost lol')
+                                message.channel.send('That spot is already occupied... you lost!')
                                 midDuel.delete(author)
                                 midDuel.delete(member.id)
                                 break
@@ -150,7 +150,7 @@ module.exports.run = async (bot, message, args) => {
                     }
                     msg.first().delete()
                 } catch (ex) {
-                    message.channel.send(`<@${turnName}> You took too long to respond, and now you lost. Nice!`)
+                    message.channel.send(`<@${turnName}>Oh, You took too long to respond, you lost!`)
                     midDuel.delete(author)
                     midDuel.delete(member.id)
                     break
