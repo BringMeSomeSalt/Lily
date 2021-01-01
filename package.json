@@ -6,6 +6,7 @@
   "dependencies": {
     "discord.js": "^12.5.1",
     "figlet": "^1.5.0",
+    "mathjs": "^8.1.1",
     "moment": "^2.29.1",
     "random-puppy": "^1.1.0",
     "snakecord": "0.0.6",
