@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
         fetch('https://meme-api.herokuapp.com/gimme')
             .then(res => res.json())
             .then(async json => {
-                let msg = await message.channel.send('Sending a meme...');
+                let msg = await message.channel.send('Meme!');
                 const memeEmbed = new Discord.MessageEmbed()
                     .setTitle("Meme!")
                     .setImage(json.url)
