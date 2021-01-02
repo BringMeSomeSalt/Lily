@@ -1,19 +1,18 @@
 const Discord = require('discord.js');
-const randomPuppy = require('random-puppy');
+const fetch = require('node-fetch');
 
 module.exports.run = async (bot, message, args) => {
-    const subReddits = ["dankmemes","dankmeme","meme","MemesOfAnime","AnimeFunny","wholesomememes","MemeEconomy","techsupportanimals","meirl","me_irl","2meirl4meirl","AdviceAnimals"]
-    const random = subReddits[Math.floor(Math.random() * subReddits.length)];
-    const img = await randomPuppy(random);
-
-    const embed = new Discord.MessageEmbed()
-    .setImage(img)
-    .setURL(`http://reddit.com/${random}`)
-    .setColor(`#80dfff`)
-
-    message.channel.send(embed);
-
-}
+        fetch('https://meme-api.herokuapp.com/gimme')
+            .then(res => res.json())
+            .then(async json => {
+                let msg = await message.channel.send('Sending a meme...');
+                const memeEmbed = new Discord.MessageEmbed()
+                    .setTitle(json.title)
+                    .setImage(json.url)
+                    .setFooter(`Link: ${json.postLink} | Subreddit: r/${json.subreddit}`);
+                msg.edit(memeEmbed);
+            });
+    }
 
 module.exports.config = {
     name: "Lmeme",
