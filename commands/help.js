@@ -8,7 +8,8 @@ module.exports.run = async (bot, message, args) => {
         .addFields(
             //all commands
          { name: 'General commands:', value: '`Lhelp`,`Linvite`,`Lsupport`,`Lpoll`'},
-         { name: 'Moderation commands:', value: '`Lclear`,`Lkick`,`Lban`,`Linfo<someone>`'},
+         { name: 'Moderation commands:', value: '`Lclear`,`Lkick`,`Lban`'},
+         { name: 'Information commands:', value:'`Linfo<someone>`,`Lserverinfo`'},       
          { name: 'Utility commands:', value: '`Lsay`,`Lannounce`,`Lid`'},
          { name: 'Meme commands:', value: '`Lmeme`,`Lreaction`,`Lhmmm`'},
          { name: 'Fun commands:', value: '`Lhug`,`Lkiss`,`Lslap`,`Lkill`,`Ljoke`'},
