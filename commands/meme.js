@@ -1,22 +1,24 @@
-const Discord = require('discord.js');
-const fetch = require('node-fetch');
+const { MessageEmbed } = require('discord.js');
+const somethingRandom = require('some-random-cat').Random
 
 module.exports.run = async (bot, message, args) => {
-        fetch('https://meme-api.herokuapp.com/gimme')
-            .then(res => res.json())
-            .then(async json => {
-                let msg = await message.channel.send('Meme!');
-                const memeEmbed = new Discord.MessageEmbed()
-                    .setTitle("Meme!")
-                    .setImage(json.url)
-                msg.edit(memeEmbed);
-            });
+        const subreddits = ["memes"]
+        let randomSubReddit = subreddits[Math.floor(Math.random() * subreddits.length)]
+        somethingRandom.getMeme(randomSubReddit).then(res => {
+            const embed = new MessageEmbed()
+                .setTitle("Meme!")
+                .setImage(res.img)
+                .setFooter(`👍 ${res.upvotes} | 👎 ${res.downvotes} | 💬 ${res.comments}`)
+                .setAuthor(`From ${res.author}`)
+                .setColor('RANDOM')
+            message.channel.send(embed)
+        }).catch(e => message.channel.send('API Error. Please try again.'))
     }
 
-module.exports.config = {
-    name: "Lmeme",
-    description: "",
-    usage: "Lmeme",
-    accessableby: "Members",
-    aliases: []
-}
+    module.exports.config = {
+        name: "Lmeme",
+        description: "example of an help.",
+        usage: "Lmeme",
+        accessableby: "Members",
+        aliases: []
+    }

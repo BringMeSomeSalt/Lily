@@ -1,4 +1,3 @@
-
 const { MessageEmbed } = require('discord.js');
 const somethingRandom = require('some-random-cat').Random
 
@@ -8,7 +7,6 @@ module.exports.run = async (bot, message, args) => {
         somethingRandom.getMeme(randomSubReddit).then(res => {
             const embed = new MessageEmbed()
                 .setTitle("Anime meme!")
-                .setURL(`https://www.reddit.com/r/${randomSubReddit}`)
                 .setImage(res.img)
                 .setFooter(`👍 ${res.upvotes} | 👎 ${res.downvotes} | 💬 ${res.comments}`)
                 .setAuthor(`From ${res.author}`)
