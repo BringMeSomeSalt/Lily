@@ -25,7 +25,6 @@ module.exports.run = async (bot, message, args) => {
                 `**Animated [${Animated}]**:\n${EmojisAnimated}\n\n**Standard [${EmojiCount}]**:\n${Emojis}\n\n**Over all emojis [${OverallEmojis}]**`
             )
             .setColor(`#80dfff`)
-            .setFooter("Bot Made By OblivionGhoul#5842", "https://i.imgur.com/Ivtf7GP.png")
         message.channel.send(Embed);
     }
 
