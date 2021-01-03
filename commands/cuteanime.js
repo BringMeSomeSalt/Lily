@@ -2,11 +2,11 @@ const { MessageEmbed } = require('discord.js');
 const somethingRandom = require('some-random-cat').Random
 
 module.exports.run = async (bot, message, args) => {
-        const subreddits = ["Animemes"]
+        const subreddits = ["awwnime"]
         let randomSubReddit = subreddits[Math.floor(Math.random() * subreddits.length)]
         somethingRandom.getMeme(randomSubReddit).then(res => {
             const embed = new MessageEmbed()
-                .setTitle("Anime meme!")
+                .setTitle("Cute Anime!")
                 .setImage(res.img)
                 .setFooter(`👍 ${res.upvotes} | 👎 ${res.downvotes} | 💬 ${res.comments}`)
                 .setColor('RANDOM')
@@ -15,9 +15,9 @@ module.exports.run = async (bot, message, args) => {
     }
 
     module.exports.config = {
-        name: "Lanimeme",
+        name: "Lcuteanime",
         description: "example of an help.",
-        usage: "Lanimeme",
+        usage: "Lcuteanime",
         accessableby: "Members",
         aliases: []
     }

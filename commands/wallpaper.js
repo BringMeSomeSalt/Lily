@@ -1,21 +1,18 @@
-const superagent = require("snekfetch");
-const Discord = require('discord.js')
+const { MessageEmbed } = require('discord.js');
+const somethingRandom = require('some-random-cat').Random
 
 module.exports.run = async (bot, message, args) => {
-    superagent.get('https://nekos.life/api/v2/img/wallpaper')
-        .end((err, response) => {
-      const embed = new Discord.MessageEmbed()
-      .setTitle("Wallpaper!")
-      .setImage(response.body.url)
-      .setColor("#80dfff")
-      .setURL(response.body.url);
-  message.channel.send(embed);
-    }).catch((err) => message.channel.send({embed: {
-                color: 16734039,
-                description: "Something went wrong... :cry:"
-            }}));
-
-}
+        const subreddits = ["Animewallpaper"]
+        let randomSubReddit = subreddits[Math.floor(Math.random() * subreddits.length)]
+        somethingRandom.getMeme(randomSubReddit).then(res => {
+            const embed = new MessageEmbed()
+                .setTitle("Anime wallpaper!")
+                .setImage(res.img)
+                .setFooter(`👍 ${res.upvotes} | 👎 ${res.downvotes} | 💬 ${res.comments}`)
+                .setColor('RANDOM')
+            message.channel.send(embed)
+        }).catch(e => message.channel.send('API Error. Please try again.'))
+    }
 
 module.exports.config = {
     name: "Lwallpaper",

@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
          { name: 'Fun commands:', value: '`Lhug`,`Lkiss`,`Lslap`,`Lkill`,`Ljoke`'},
          { name: 'Game commands:', value: '`Lslots`,`Lsnake`,`Ltictactoe`'},
          { name: 'Misc commands:', value: '`L8ball<question>`,`Ldice`,`Lflipcoin`,`Lsay`'},
-         { name: 'Anime commands:', value: '`Lwallpaper`,`Lneko`,`Lkemonomimi`,`Lgecg`'},
+         { name: 'Anime commands:', value: '`Lanimegirl``Lwallpaper`,`Lneko`,`Lkemonomimi`,`Lcuteanime`'},
          { name: 'Animal commands:', value: '`Lcute`,`Ldog`,`Lcat`,`Llizard`,`Lgoose`'},
          { name: 'NSFW:', value: '`Lnsfw`'},
          { name: 'Thank you!', value: '[invite bot](http://bit.ly/lilybot) | [support server](https://discord.gg/5nqkBD6rrE)'}

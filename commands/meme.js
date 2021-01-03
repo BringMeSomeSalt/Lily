@@ -9,7 +9,6 @@ module.exports.run = async (bot, message, args) => {
                 .setTitle("Meme!")
                 .setImage(res.img)
                 .setFooter(`👍 ${res.upvotes} | 👎 ${res.downvotes} | 💬 ${res.comments}`)
-                .setAuthor(`From ${res.author}`)
                 .setColor('RANDOM')
             message.channel.send(embed)
         }).catch(e => message.channel.send('API Error. Please try again.'))
