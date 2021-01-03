@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
          { name: 'Utility commands:', value: '`Lsay`,`Lannounce`,`Lid`,`Linfo<someone>`,`Lserverinfo`'},
          { name: 'Meme commands:', value: '`Lmeme`,`Lanimeme`,`Lreaction`,`Lhmmm`'},
          { name: 'Fun commands:', value: '`Lhug`,`Lkiss`,`Lslap`,`Lkill`,`Ljoke`'},
-         { name: 'Game commands:', value: '`Lslots`,`Lsnake`,`Ltictactoe`'},
+         { name: 'Game commands:', value: '`Lslots`,`Lsnake`,`Ltictactoe`,`Lconnect4`'},
          { name: 'Misc commands:', value: '`L8ball<question>`,`Ldice`,`Lflipcoin`,`Lsay`'},
          { name: 'Anime commands:', value: '`Lanimegirl``Lwallpaper`,`Lneko`,`Lkemonomimi`,`Lcuteanime`'},
          { name: 'Animal commands:', value: '`Lcute`,`Ldog`,`Lcat`,`Llizard`,`Lgoose`'},
