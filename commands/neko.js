@@ -1,26 +1,15 @@
-const superagent = require("snekfetch");
-const Discord = require('discord.js')
+const {Random} = require('something-random-on-discord');
+const random = new Random();
 
 module.exports.run = async (bot, message, args) => {
-    superagent.get('https://nekos.life/api/v2/img/neko')
-        .end((err, response) => {
-      const embed = new Discord.MessageEmbed()
-      .setTitle("Neko!")
-      .setImage(response.body.url)
-      .setColor("#80dfff")
-      .setURL(response.body.url);
-  message.channel.send(embed);
-    }).catch((err) => message.channel.send({embed: {
-                color: 16734039,
-                description: "Something went wrong... :cry:"
-            }}));
+    let data = await random.getNeko()
+        message.channel.send(data)
+    }
 
-}
-
-module.exports.config = {
-    name: "Lneko",
-    description: "",
-    usage: "Lneko",
-    accessableby: "Members",
-    aliases: []
-}
+    module.exports.config = {
+        name: "Lneko",
+        description: "example of an help.",
+        usage: "Lneko",
+        accessableby: "Members",
+        aliases: []
+    }
