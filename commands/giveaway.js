@@ -2,10 +2,10 @@ const { MessageEmbed } = require("discord.js");
 const ms = require("ms");
 
     module.exports.run = async (bot, message, args) => {
-  if (!args[0]) return message.channel.send('❌ ?giveaway <time> <gift>');
+  if (!args[0]) return message.channel.send('❌ Lgiveaway <time> <gift>');
     if ( !args[0].endsWith("h") && !args[0].endsWith("m") && !args[0].endsWith("s")) return message.channel.send('You can only use m/h/s for the giveaway time');
     const gift = args.slice(1).join(" ");
-    if (!gift) return message.channel.send('❌ ?giveaway <time> <gift>');
+    if (!gift) return message.channel.send('❌ Lgiveaway <time> <gift>');
     const giftembed = new MessageEmbed()
       .setTitle(`**${gift}**`)
       .setDescription(`React with 🎁 to enter`)
