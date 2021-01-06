@@ -3,7 +3,7 @@ const api = new NekoBot();
 
 module.exports.run = async (bot, message, args) => {
         try {
-            const image = await api.get("kanna");
+            const image = await api.get("neko");
             message.channel.send(image);
         } catch (err) {
             console.log(err)
@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
     }
 
     module.exports.config = {
-        name: "Lkanna",
+        name: "Lnekotest",
         description: "example of an help.",
         usage: "Lkanna",
         accessableby: "Members",
