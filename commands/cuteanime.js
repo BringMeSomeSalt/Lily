@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
         let subreddit = subreddits[Math.floor(Math.random() * subreddits.length)];
         let img = await api(subreddit, true);
         const Embed = new MessageEmbed()
-          .setTitle(`Anime meme!`)
+          .setTitle(`Cute Anime!`)
           .setColor("RANDOM")
           .setImage(img);
         message.channel.send(Embed);
