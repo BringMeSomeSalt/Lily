@@ -1,18 +1,16 @@
-const { MessageEmbed } = require('discord.js');
-const somethingRandom = require('some-random-cat').Random
+const { MessageEmbed } = require("discord.js");
+const api = require("imageapi.js");
 
 module.exports.run = async (bot, message, args) => {
-        const subreddits = ["kemonomimi"]
-        let randomSubReddit = subreddits[Math.floor(Math.random() * subreddits.length)]
-        somethingRandom.getMeme(randomSubReddit).then(res => {
-            const embed = new MessageEmbed()
-                .setTitle("Kemonomimi!")
-                .setImage(res.img)
-                .setFooter(`👍 ${res.upvotes} | 👎 ${res.downvotes} | 💬 ${res.comments}`)
-                .setColor('RANDOM')
-            message.channel.send(embed)
-        }).catch(e => message.channel.send('API Error. Please try again.'))
-    }
+        let subreddits = ["kemonomimi"];
+        let subreddit = subreddits[Math.floor(Math.random() * subreddits.length)];
+        let img = await api(subreddit, true);
+        const Embed = new MessageEmbed()
+          .setTitle(`Kemonomimi!`)
+          .setColor("RANDOM")
+          .setImage(img);
+        message.channel.send(Embed);
+      }
 
 
 module.exports.config = {
