@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
     superagent.get('https://nekos.life/api/v2/img/avatar')
         .end((err, response) => {
       const embed = new Discord.MessageEmbed()
-      .setTitle("Cat!")
+      .setTitle("avatar!")
       .setImage(response.body.url)
       .setColor("#80dfff")
       .setURL(response.body.url);
